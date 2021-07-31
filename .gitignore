@@ -1,6 +1,8 @@
 ### FOLDER GEDE ###
 /app-assets/
 /system/
+application/config/config.php
+application/config/database.php
 
 ### CodeIgniter ###
 */config/development
