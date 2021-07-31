@@ -108,6 +108,19 @@ class Sasaran extends Auth_Controller {
 		echo json_encode($out);
 	}
 
+	public function editBiodata() {
+		$data = $this->input->POST();
+		$result = $this->M_Sasaran->update($data);
+
+		if ($result > 0) {
+				$this->session->set_flashdata('msg', show_succ_msg('Biodata Berhasil Disimpan'));
+				redirect('Profile');
+		} else {
+				$this->session->set_flashdata('msg', show_err_msg('Biodata Gagal Disimpan'));
+				redirect('Profile');
+		}
+	}
+
 	public function cari(){
 		$nik=$_GET['nik'];
 		$cari =$this->M_autocomplete->cari($nik)->result();

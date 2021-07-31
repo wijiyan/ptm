@@ -96,7 +96,7 @@
                                                                             <div class="col-md-6">
                                                                                 <fieldset class="form-group position-relative">
                                                                                     <label for="nik">NIK*</label>
-                                                                                    <input type="text" class="form-control" id="nik" name="nik" autocomplete="off" placeholder="NIK (KTP)" required>
+                                                                                    <input type="text" class="form-control" id="nik" minlength="16" maxlength="16" name="nik" autocomplete="off" onkeypress="validate(event)" placeholder="NIK (KTP)" required>
                                                                                 </fieldset>
                                                                             </div>
                                                                             <div class="col-md-6">
@@ -171,7 +171,7 @@
                                                                             <div class="col-md-6">
                                                                                 <fieldset class="form-group position-relative">
                                                                                     <label for="hp">HP (WhatsApp)*</label>
-                                                                                    <input type="text" class="form-control" id="hp" name="hp" placeholder="HP (WhatsApp)" required>
+                                                                                    <input type="text" class="form-control" id="hp" name="hp" minlength="10" placeholder="HP (WhatsApp)" autocomplete="off" onkeypress="validate(event)" required>
                                                                                 </fieldset>
                                                                             </div>
                                                                             <div class="col-md-6">
@@ -235,13 +235,13 @@
                                                                         <div class="col-md-6">
                                                                             <fieldset class="form-group position-relative">
                                                                                 <label for="rt">RT</label>
-                                                                                <input type="text" class="form-control" name="rt_domisili" id="rt_domisili" placeholder="RT" required>
+                                                                                <input type="text" class="form-control" onkeypress="validate(event)" autocomplete="off" name="rt_domisili" id="rt_domisili" placeholder="RT" required>
                                                                             </fieldset>
                                                                         </div>
                                                                         <div class="col-md-6">
                                                                             <fieldset class="form-group position-relative">
                                                                                 <label for="rw">RW</label>
-                                                                                <input type="text" class="form-control" name="rw_domisili" id="rw_domisili" placeholder="RW" required>
+                                                                                <input type="text" class="form-control" onkeypress="validate(event)" autocomplete="off" name="rw_domisili" id="rw_domisili" placeholder="RW" required>
                                                                             </fieldset>
                                                                         </div>
                                                                         <div class="col-md-12">
@@ -298,6 +298,7 @@
             document.getElementById("rt_domisili").disabled ='true';
             document.getElementById("rw_domisili").disabled ='true';
             document.getElementById("alamat_domisili").disabled ='true';
+            document.getElementById("message").value ='';
         //document.getElementById("tgl_vaksin").disabled ='true';
     }
 
@@ -402,6 +403,24 @@
             document.getElementById("rt_domisili").disabled = false;
             document.getElementById("rw_domisili").disabled = false;
             document.getElementById("alamat_domisili").disabled = false;
+        }
+    }
+
+    function validate(evt)
+    {
+        if(evt.keyCode!=8)
+        {
+            var theEvent = evt || window.event;
+            var key = theEvent.keyCode || theEvent.which;
+            key = String.fromCharCode(key);
+            var regex = /[0-9]|\./;
+            if (!regex.test(key))
+            {
+                theEvent.returnValue = false;
+
+                if (theEvent.preventDefault)
+                    theEvent.preventDefault();
+            }
         }
     }
 

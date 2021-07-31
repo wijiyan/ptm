@@ -81,11 +81,11 @@
                     </fieldset>
                     <fieldset class="form-group position-relative">
                         <label for="rt">RT Domisili</label>
-                        <input type="text" class="form-control" name="rt_domisili" id="rt_domisili" placeholder="RT" required>
+                        <input type="text" class="form-control" name="rt_domisili" id="rt_domisili" onkeypress="validateNumber(event)" placeholder="RT" required>
                     </fieldset>
                     <fieldset class="form-group position-relative">
                         <label for="rw">RW Domisili</label>
-                        <input type="text" class="form-control" name="rw_domisili" id="rw_domisili" placeholder="RW" required>
+                        <input type="text" class="form-control" name="rw_domisili" id="rw_domisili" onkeypress="validateNumber(event)" placeholder="RW" required>
                     </fieldset>
                     <fieldset class="form-group position-relative">
                         <label for="alamat">Alamat Domisili</label>
@@ -394,13 +394,13 @@
                 <tbody>
                     <tr>
                         <td class="col-md-3">
-                            <input type="text" class="form-control" name="sistol" id="sistol" placeholder="Sistol">
+                            <input type="text" class="form-control" name="sistol" id="sistol" onkeypress="validateNumber(event)" placeholder="Sistol">
                         </td>
                         <td class="col-md-1">
                             /
                         </td>
                         <td class="col-md-3">
-                            <input type="text" class="form-control" name="diastol" id="diastol" placeholder="Diastol">
+                            <input type="text" class="form-control" name="diastol" id="diastol" onkeypress="validateNumber(event)" placeholder="Diastol">
                         </td>
                         <td class="col-md-4">
                         </td>
@@ -417,7 +417,7 @@
                             BB
                         </td>
                         <td class="col-md-3">
-                            <input type="decimal" class="form-control" name="bb" id="bb" placeholder="BB">
+                            <input type="decimal" class="form-control" onkeypress="validateNumber(event)" name="bb" id="bb" placeholder="BB">
                         </td>
                         <td style="text-align: left;" class="col-md-1">
                             (Kg)
@@ -426,7 +426,7 @@
                             TB
                         </td>
                         <td class="col-md-3">
-                            <input type="text" class="form-control" name="tb" id="tb" placeholder="TB">
+                            <input type="text" class="form-control" onkeypress="validateNumber(event)" name="tb" id="tb" placeholder="TB">
                         </td>
                         <td style="text-align: left;"  class="col-md-1">
                             (Cm)
@@ -438,12 +438,12 @@
             </table>
             <br>
             <fieldset class="form-group">
-                <label for="tpt_pemeriksaan"><?php echo $no++;?>. Lingkar Perut</label>
-                <input type="text" class="form-control" name="lingkar_perut" id="lingkar_perut" placeholder="Lingkar Perut" required>
+                <label for="tpt_pemeriksaan"><?php echo $no++;?>. Lingkar Perut (Cm)</label>
+                <input type="text" class="form-control" name="lingkar_perut" id="lingkar_perut" onkeypress="validateNumber(event)" placeholder="Lingkar Perut" required>
             </fieldset>
             <fieldset class="form-group">
                 <label for="tpt_pemeriksaan"><?php echo $no++;?>. Pemeriksaan Gula (GDS)</label>
-                <input type="text" class="form-control" name="gds" id="gds" placeholder="Gula Darah Sewaktu" required>
+                <input type="text" class="form-control" name="gds" id="gds" placeholder="Gula Darah Sewaktu" onkeypress="validateNumber(event)" required>
             </fieldset>
             <table>
                 <tbody>

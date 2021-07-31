@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <head>
-  <title>Vaksinasi Covid-19 Cempaka Putih</title>
+  <title>Penji PTM Penjaringan</title>
   <!-- meta -->
   <?php echo @$_meta; ?>
 
