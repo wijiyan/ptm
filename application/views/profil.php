@@ -17,7 +17,7 @@
                             Ganti Password
                         </a>
                     </li>
-                    <?php if($this->userdata->level = 'sasaran'){?>
+                    <?php if($this->userdata->level == 'sasaran'){?>
                         <li class="nav-item">
                             <a class="nav-link d-flex py-75" id="account-pill-sasaran" data-toggle="pill" href="#account-vertical-sasaran" aria-expanded="false">
                                 <i class="feather icon-credit-card mr-50 font-medium-3"></i>

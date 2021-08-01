@@ -11,7 +11,7 @@ class Dashboard extends AUTH_Controller {
 	public function index() {
 		$data['userdata'] 	= $this->userdata;
 		$data['total_sasaran']  = $this->M_Dashboard->total_sasaran();
-		//$data['sakit'] 		= $this->M_Dashboard->sakit();
+		$data['skrining'] 		= $this->M_Dashboard->skrining();
 		//$data['sehat'] 		= $this->M_Dashboard->sehat();
 		// $data['emergency'] 	= $this->M_Dashboard->kondisi('emergency');
 		// $data['urgent']  	= $this->M_Dashboard->kondisi('urgent');

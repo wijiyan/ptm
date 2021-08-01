@@ -23,27 +23,11 @@
 					<div class="card-header d-flex flex-column align-items-start pb-0">
 						<div class="avatar bg-rgba-danger p-50 m-0">
 							<div class="avatar-content">
-								<i class="feather icon-user-x text-danger font-medium-5"></i>
+								<i class="feather icon-bar-chart-2 text-danger font-medium-5"></i>
 							</div>
 						</div>
-						<h2 class="text-bold-700 mt-1 mb-25"><?php // echo $sakit;?></h2>
-						<p class="mb-0">SAKIT</p>
-					</div>
-					<div class="card-content">
-						<div id="orders-received-chart"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6 col-12">
-				<div class="card">
-					<div class="card-header d-flex flex-column align-items-start pb-0">
-						<div class="avatar bg-rgba-success p-50 m-0">
-							<div class="avatar-content">
-								<i class="feather icon-user-check text-success font-medium-5"></i>
-							</div>
-						</div>
-						<h2 class="text-bold-700 mt-1 mb-25"><?php // echo $sehat;?></h2>
-						<p class="mb-0">SEHAT</p>
+						<h2 class="text-bold-700 mt-1 mb-25"><?php echo $skrining;?></h2>
+						<p class="mb-0">Total Skrining</p>
 					</div>
 					<div class="card-content">
 						<div id="orders-received-chart"></div>
@@ -53,7 +37,7 @@
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header">
-						<h4 class="card-title">Grafik Skrining Bulanan</h4>
+						<h4 class="card-title">Grafik Skrining Mingguan</h4>
 					</div>
 					<div class="card-content">
 						<div class="card-body pl-0">

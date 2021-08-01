@@ -19,8 +19,8 @@ class M_Dashboard extends CI_Model {
 		return $data->num_rows();
 	}
 
-	public function sehat() {
-		$data = $this->db->query('SELECT * FROM tbl_pasien WHERE (demam = "tidak" AND batuk = "tidak" AND pilek = "tidak" AND sesak_nafas = "tidak")  AND tgl_kunjungan = "'.date('Y-m-d').'"');
+	public function skrining() {
+		$data = $this->db->get('tbl_pemeriksaan');
 		return $data->num_rows();
 	}
 }

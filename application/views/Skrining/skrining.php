@@ -16,9 +16,9 @@
 					</div>
 				</div>
 				<div class="col-md-12">
-					<a data-toggle="modal" data-target="#tambah-skrining" class="btn btn-outline-primary">Tambah Pemeriksaan</a>
+					<a data-toggle="modal" data-target="#tambah-skrining" class="btn btn-outline-primary">Tambah Skrining</a>
 					<?php if($this->userdata->level == 'admin') { ?>
-						<a href="<?php echo base_url('Skrining/export_excel');?>" class="btn btn-outline-primary">Export Excel</a>
+						<a href="<?php echo base_url('Skrining/export_excel');?>" class="btn btn-outline-primary"><i class="fa fa-file-excel-o"> Download</i></a>
 						<!-- <button class="btn btn-outline-success" data-toggle="modal" data-target="#import-pelaporan"><i class="fa fa-file-excel-o"></i> Import Excel</button> -->
 					<?php } ?>
 				</div>

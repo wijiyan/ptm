@@ -9,7 +9,7 @@
                 <?php } if($this->userdata->level == 'admin'){?>
                     <fieldset class="form-group">
                         <label for="nik">NIK</label>
-                        <input type="text" class="form-control" name="nik" id="nik" placeholder="NIK KTP" required>
+                        <input type="text" class="form-control" name="nik" id="nik" onkeypress="validateNumber(event)"  minlength="16" maxlength="16" placeholder="NIK KTP" required>
                     </fieldset>
                     <fieldset class="form-group">
                         <label for="nama">Nama</label>

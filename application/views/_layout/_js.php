@@ -44,7 +44,10 @@
 <!-- <script src="<?php echo base_url();?>app-assets/js/scripts/charts/chart-chartjs.js"></script> -->
 <!-- END: Page JS-->
 <?php 
-if($page == 'Home')
+if($page == 'Dashboard')
+{
+	include './assets/js/js/grafik.php';
+}else if($page == 'Home')
 {
 	include './assets/js/js/ajax/ajax_home.php';
 } else if ($page == 'Sasaran'){

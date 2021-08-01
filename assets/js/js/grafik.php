@@ -14,7 +14,7 @@ $(window).on("load", function () {
   var $white = '#fff';
   var $black = '#000';
 
-  var themeColors = [$primary, $success, $danger, $warning, $label_color, $warning, $primary, $success, $danger, $warning, $label_color, $warning];
+  var themeColors = [$primary, $success, $danger, $warning, $label_color, $warning, $primary, $success, $danger, $warning, $label_color, $warning, $primary, $success, $danger, $warning, $label_color, $warning, $primary, $success, $danger, $warning, $label_color, $warning, $primary, $success, $danger, $warning, $label_color, $warning, $primary, $success, $danger, $warning, $label_color, $warning, $primary, $success, $danger, $warning, $label_color, $warning, $primary, $success, $danger, $warning, $label_color, $warning];
 // Bar Chart
   // ------------------------------------------
 
@@ -60,26 +60,31 @@ $(window).on("load", function () {
     },
     title: {
       display: true,
-      text: 'Grafik Kunjungan Bulanan'
+      text: 'Grafik Kunjungan Mingguan'
     },
 
   };
 
   // Chart Data
   var barchartData = {
-    labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli','Agustus', 'September', 'Oktober', 'November', 'Desember'],
+    labels: [
+    <?php for ($i = 1; $i <= 48; $i++) {
+      echo $i.', ';
+    } ?>
+    ],
+    //labels: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli','Agustus', 'September', 'Oktober', 'November', 'Desember'],
     datasets: [{
-      label: "Grafik Kunjungan Bulanan",
+      label: "Grafik Kunjungan Mingguan",
       data: [
       <?php 
 
-			for ($i=1; $i <= 12; $i++) { 
+			for ($i=1; $i <= 48; $i++) { 
 
-				$total_kunjungan = $this->db->query(' SELECT * FROM tbl_pasien
+				$total = $this->db->query(' SELECT * FROM tbl_pemeriksaan
 					WHERE
-					MONTH(tgl_kunjungan) = '.$i.' AND YEAR(tgl_kunjungan)');
+					WEEK(tgl_pemeriksaan) = '.$i.' AND YEAR(tgl_pemeriksaan)');
 
-				echo $total_kunjungan->num_rows()." ,";
+				echo $total->num_rows()." ,";
 			}?>
       ],
       backgroundColor: themeColors,
